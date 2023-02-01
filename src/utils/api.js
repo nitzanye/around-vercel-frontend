@@ -11,7 +11,7 @@ class Api {
     return fetch(`${this._baseUrl}/cards`, {
       mode: 'cors',
       headers: {
-        authorization: `Bearer ${localStorage.getItem('token')}`,
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     }).then(this._checkResStatus);
   };
@@ -20,7 +20,7 @@ class Api {
     return fetch(`${this._baseUrl}/users/me`, {
       mode: 'cors',
       headers: {
-        authorization: `Bearer ${localStorage.getItem('token')}`,
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     }).then(this._checkResStatus);
   };
@@ -30,7 +30,7 @@ class Api {
       method: 'PATCH',
       mode: 'cors',
       headers: {
-        authorization: `Bearer ${localStorage.getItem('token')}`,
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
@@ -42,7 +42,7 @@ class Api {
       method: 'PATCH',
       mode: 'cors',
       headers: {
-        authorization: `Bearer ${localStorage.getItem('token')}`,
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -56,7 +56,7 @@ class Api {
       method: 'POST',
       mode: 'cors',
       headers: {
-        authorization: `Bearer ${localStorage.getItem('token')}`,
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -71,7 +71,7 @@ class Api {
       method: 'DELETE',
       mode: 'cors',
       headers: {
-        authorization: `Bearer ${localStorage.getItem('token')}`,
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
         'Content-Type': 'application/json',
       },
     }).then(this._checkResStatus);
@@ -83,7 +83,7 @@ class Api {
       method,
       mode: 'cors',
       headers: {
-        authorization: `Bearer ${localStorage.getItem('token')}`,
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
         'Content-Type': 'application/json',
       },
     }).then(this._checkResStatus);

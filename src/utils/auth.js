@@ -3,6 +3,8 @@ const BASE_URL =
     ? 'https://around-vercel-backend.vercel.app'
     : 'http://localhost:3000';
 
+//https://around-vercel-backend.vercel.app/
+
 // const BASE_URL =
 // process.env.NODE_ENV === 'production'
 // ? 'https://nitzan-smulevici.art'
@@ -42,7 +44,7 @@ export const checkUserToken = (token) => {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${token}`,
     },
   }).then(handleResponse);
 };
