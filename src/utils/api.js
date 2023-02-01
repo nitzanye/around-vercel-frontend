@@ -9,6 +9,7 @@ class Api {
 
   getInitialCards = () => {
     return fetch(`${this._baseUrl}/cards`, {
+      mode: 'cors',
       headers: {
         authorization: `Bearer ${localStorage.getItem('token')}`,
       },
@@ -17,6 +18,7 @@ class Api {
 
   getUserData = () => {
     return fetch(`${this._baseUrl}/users/me`, {
+      mode: 'cors',
       headers: {
         authorization: `Bearer ${localStorage.getItem('token')}`,
       },
@@ -26,6 +28,7 @@ class Api {
   updateUserInfo = (data) => {
     return fetch(`${this._baseUrl}/users/me`, {
       method: 'PATCH',
+      mode: 'cors',
       headers: {
         authorization: `Bearer ${localStorage.getItem('token')}`,
         'Content-Type': 'application/json',
@@ -37,6 +40,7 @@ class Api {
   updateUserAvatar = (newAvatarLink) => {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: 'PATCH',
+      mode: 'cors',
       headers: {
         authorization: `Bearer ${localStorage.getItem('token')}`,
         'Content-Type': 'application/json',
@@ -50,6 +54,7 @@ class Api {
   addNewCard = (cardName, cardLink) => {
     return fetch(`${this._baseUrl}/cards`, {
       method: 'POST',
+      mode: 'cors',
       headers: {
         authorization: `Bearer ${localStorage.getItem('token')}`,
         'Content-Type': 'application/json',
@@ -64,6 +69,7 @@ class Api {
   deleteCard = (cardId) => {
     return fetch(`${this._baseUrl}/cards/${cardId}`, {
       method: 'DELETE',
+      mode: 'cors',
       headers: {
         authorization: `Bearer ${localStorage.getItem('token')}`,
         'Content-Type': 'application/json',
@@ -75,6 +81,7 @@ class Api {
     const method = isLiked ? 'DELETE' : 'PUT';
     return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
       method,
+      mode: 'cors',
       headers: {
         authorization: `Bearer ${localStorage.getItem('token')}`,
         'Content-Type': 'application/json',

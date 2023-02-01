@@ -14,6 +14,7 @@ const handleResponse = (res) =>
 export const register = (email, password) => {
   return fetch(`${BASE_URL}/signup`, {
     method: 'POST',
+    mode: 'cors',
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
@@ -25,6 +26,7 @@ export const register = (email, password) => {
 export const authorize = (email, password) => {
   return fetch(`${BASE_URL}/signin`, {
     method: 'POST',
+    mode: 'cors',
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
@@ -36,6 +38,7 @@ export const authorize = (email, password) => {
 export const checkUserToken = (token) => {
   return fetch(`${BASE_URL}/users/me`, {
     method: 'GET',
+    mode: 'cors',
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
