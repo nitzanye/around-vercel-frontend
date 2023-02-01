@@ -1,6 +1,6 @@
 const BASE_URL =
   process.env.NODE_ENV === 'production'
-    ? 'https://around-vercel-backend.vercel.app/'
+    ? 'https://around-vercel-backend.vercel.app'
     : 'http://localhost:3000';
 
 // const BASE_URL =
